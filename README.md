@@ -5,10 +5,10 @@ whatanime.ga api helper
 
 ### 완성 기능 목록
 
-- me []
-- list []
-- search [x]
-- previews []
+- [ ] me
+- [ ] list
+- [x] search
+- [ ] previews
 
 ### 사용법
 
