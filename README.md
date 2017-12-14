@@ -1,14 +1,37 @@
 # whatanime.ga-helper
 whatanime.ga api helper
 
+## English Doc
+
+### List of completion functions
+
+- [x] me
+- [x] list
+- [x] search
+- [x] image preview
+- [x] video preview
+
+### How to use
+
+You can view it using jsdoc.
+
+### example
+
+Please refer to test.js.
+
+### Return data
+
+Please refer to [whatanime.ga API Doc] (https://soruly.github.io/whatanime.ga/#/).
+
 ## 한국어 Doc
 
 ### 완성 기능 목록
 
-- [ ] me
-- [ ] list
+- [x] me
+- [x] list
 - [x] search
-- [ ] previews
+- [x] image preview
+- [x] video preview
 
 ### 사용법
 
@@ -17,3 +40,7 @@ jsdoc 를 이용하여 볼 수 있습니다.
 ### 예시
 
 test.js 를 참고해주세요.
+
+### 반환 데이터
+
+[whatanime.ga API Doc](https://soruly.github.io/whatanime.ga/#/) 를 참고해주세요.
