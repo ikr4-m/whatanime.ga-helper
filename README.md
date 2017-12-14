@@ -23,7 +23,7 @@ Please refer to test.js.
 
 ### Return data
 
-Please refer to [whatanime.ga API Doc] (https://soruly.github.io/whatanime.ga/#/).
+Please refer to [whatanime.ga API Doc](https://soruly.github.io/whatanime.ga/#/).
 
 ## 한국어 Doc
 
