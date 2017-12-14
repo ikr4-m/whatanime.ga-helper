@@ -1,5 +1,7 @@
 # whatanime.ga-helper
-whatanime.ga api helper
+[![npm version](https://badge.fury.io/js/whatanimega-helper.svg)](https://badge.fury.io/js/whatanimega-helper)
+
+[![NPM](https://nodei.co/npm/whatanimega-helper.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/whatanimega-helper/)
 
 ## English Doc
 
