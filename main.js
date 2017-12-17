@@ -108,7 +108,7 @@ class Whatanime {
    * @param {string} season It is season of animation to receive preview.
    * @param {string} anime The name of the animation to receive the preview.
    * @param {string} filename The file name of the animation to receive the preview.
-   * @param {string} at Which part of the animation will you get? You can set it here.
+   * @param {number} at Which part of the animation will you get? You can set it here.
    */
   previewImage (season, anime, filename, at) {
     return new Promise(async (resolve, reject) => {
@@ -143,7 +143,7 @@ class Whatanime {
    * @param {string} season It is season of animation to receive preview.
    * @param {string} anime The name of the animation to receive the preview.
    * @param {string} filename The file name of the animation to receive the preview.
-   * @param {string} at Which part of the animation will you get? You can set it here.
+   * @param {number} at Which part of the animation will you get? You can set it here.
    */
   previewVideo (season, anime, filename, at) {
     return new Promise(async (resolve, reject) => {
