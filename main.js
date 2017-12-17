@@ -19,8 +19,8 @@ class Whatanime {
         search: uri + 'api/search?token=' + this.apiKey,
         me: uri + 'api/me?token=' + this.apiKey,
         list: uri + 'api/list?token=' + this.apiKey,
-        previewImage: uri + 'thumbnail.php?season={season}&anime={anime}&file={filename}&t={at}&token=' + this.apiKey,
-        previewVideo: uri + 'preview.php?season={season}&anime={anime}&file={filename}&t={at}&token=' + this.apiKey
+        previewImage: uri + 'thumbnail.php?season={season}&anime={anime}&file={filename}&t={at}&token={tokenthumb}',
+        previewVideo: uri + 'preview.php?season={season}&anime={anime}&file={filename}&t={at}&token={tokenthumb}'
       }
       this.ready = true
     } else {

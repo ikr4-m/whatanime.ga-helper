@@ -1,6 +1,6 @@
 {
   "name": "whatanimega-helper",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "whatanime.ga api helper",
   "main": "main.js",
   "repository": "https://github.com/small-sunshines/whatanime.ga-helper.git",
