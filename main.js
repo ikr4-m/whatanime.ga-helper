@@ -61,7 +61,7 @@ class Whatanime {
             body: formData,
             method: 'POST'
           })
-          resolve(response)
+          resolve(JSON.parse(response))
         }
       } catch (e) {
         reject(e)
@@ -79,7 +79,7 @@ class Whatanime {
         const response = await request({
           uri: this.uri.me
         })
-        resolve(response)
+        resolve(JSON.parse(response))
       } catch (e) {
         reject(e)
       }
@@ -96,7 +96,7 @@ class Whatanime {
         const response = await request({
           uri: this.uri.list
         })
-        resolve(response)
+        resolve(JSON.parse(response))
       } catch (e) {
         reject(e)
       }
@@ -125,10 +125,10 @@ class Whatanime {
         } else {
           let response = await request({
             uri: this.uri.previewImage
-              .replace(/{season}/, season)
-              .replace(/{anime}/, anime)
-              .replace(/{filename}/, filename)
-              .replace(/{at}/, at)
+              .replace(/{season}/, encodeURIComponent(season))
+              .replace(/{anime}/, encodeURIComponent(anime))
+              .replace(/{filename}/, encodeURIComponent(filename))
+              .replace(/{at}/, encodeURIComponent(at))
           })
           resolve(response)
         }
@@ -160,10 +160,10 @@ class Whatanime {
         } else {
           let response = await request({
             uri: this.uri.previewVideo
-              .replace(/{season}/, season)
-              .replace(/{anime}/, anime)
-              .replace(/{filename}/, filename)
-              .replace(/{at}/, at)
+              .replace(/{season}/, encodeURIComponent(season))
+              .replace(/{anime}/, encodeURIComponent(anime))
+              .replace(/{filename}/, encodeURIComponent(filename))
+              .replace(/{at}/, encodeURIComponent(at))
           })
           resolve(response)
         }
