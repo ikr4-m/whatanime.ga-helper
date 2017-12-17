@@ -109,8 +109,9 @@ class Whatanime {
    * @param {string} anime The name of the animation to receive the preview.
    * @param {string} filename The file name of the animation to receive the preview.
    * @param {number} at Which part of the animation will you get? You can set it here.
+   * @param {string} tokenthumb Put the tokenthumb you received in the search results here.
    */
-  previewImage (season, anime, filename, at) {
+  previewImage (season, anime, filename, at, tokenthumb) {
     return new Promise(async (resolve, reject) => {
       try {
         this.isReady()
@@ -122,6 +123,8 @@ class Whatanime {
           reject(Error('filename is must string'))
         } else if (typeof at !== 'number') {
           reject(Error('at is must number'))
+        } else if (typeof tokenthumb !== 'string') {
+          reject(Error('tokenthumb is must string'))
         } else {
           let response = await request({
             uri: this.uri.previewImage
@@ -129,6 +132,7 @@ class Whatanime {
               .replace(/{anime}/, encodeURIComponent(anime))
               .replace(/{filename}/, encodeURIComponent(filename))
               .replace(/{at}/, encodeURIComponent(at))
+              .replace(/{tokenthumb}/, encodeURIComponent(tokenthumb))
           })
           resolve(response)
         }
@@ -144,8 +148,9 @@ class Whatanime {
    * @param {string} anime The name of the animation to receive the preview.
    * @param {string} filename The file name of the animation to receive the preview.
    * @param {number} at Which part of the animation will you get? You can set it here.
+   * @param {string} tokenthumb Put the tokenthumb you received in the search results here.
    */
-  previewVideo (season, anime, filename, at) {
+  previewVideo (season, anime, filename, at, tokenthumb) {
     return new Promise(async (resolve, reject) => {
       try {
         this.isReady()
@@ -157,6 +162,8 @@ class Whatanime {
           reject(Error('filename is must string'))
         } else if (typeof at !== 'number') {
           reject(Error('at is must number'))
+        } else if (typeof tokenthumb !== 'string') {
+          reject(Error('tokenthumb is must string'))
         } else {
           let response = await request({
             uri: this.uri.previewVideo
@@ -164,6 +171,7 @@ class Whatanime {
               .replace(/{anime}/, encodeURIComponent(anime))
               .replace(/{filename}/, encodeURIComponent(filename))
               .replace(/{at}/, encodeURIComponent(at))
+              .replace(/{tokenthumb}/, encodeURIComponent(tokenthumb))
           })
           resolve(response)
         }
