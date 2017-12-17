@@ -120,8 +120,8 @@ class Whatanime {
           reject(Error('anime is must string'))
         } else if (typeof filename !== 'string') {
           reject(Error('filename is must string'))
-        } else if (typeof at !== 'string') {
-          reject(Error('at is must string'))
+        } else if (typeof at !== 'number') {
+          reject(Error('at is must number'))
         } else {
           let response = await request({
             uri: this.uri.previewImage
@@ -155,8 +155,8 @@ class Whatanime {
           reject(Error('anime is must string'))
         } else if (typeof filename !== 'string') {
           reject(Error('filename is must string'))
-        } else if (typeof at !== 'string') {
-          reject(Error('at is must string'))
+        } else if (typeof at !== 'number') {
+          reject(Error('at is must number'))
         } else {
           let response = await request({
             uri: this.uri.previewVideo
