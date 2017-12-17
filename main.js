@@ -104,7 +104,7 @@ class Whatanime {
   }
 
   /**
-   * An animation preview is received as an image.
+   * An animation preview is received as the url of the image.
    * @param {string} season It is season of animation to receive preview.
    * @param {string} anime The name of the animation to receive the preview.
    * @param {string} filename The file name of the animation to receive the preview.
@@ -126,15 +126,12 @@ class Whatanime {
         } else if (typeof tokenthumb !== 'string') {
           reject(Error('tokenthumb is must string'))
         } else {
-          let response = await request({
-            uri: this.uri.previewImage
-              .replace(/{season}/, encodeURIComponent(season))
-              .replace(/{anime}/, encodeURIComponent(anime))
-              .replace(/{filename}/, encodeURIComponent(filename))
-              .replace(/{at}/, encodeURIComponent(at))
-              .replace(/{tokenthumb}/, encodeURIComponent(tokenthumb))
-          })
-          resolve(response)
+          resolve(this.uri.previewImage
+            .replace(/{season}/, encodeURIComponent(season))
+            .replace(/{anime}/, encodeURIComponent(anime))
+            .replace(/{filename}/, encodeURIComponent(filename))
+            .replace(/{at}/, encodeURIComponent(at))
+            .replace(/{tokenthumb}/, encodeURIComponent(tokenthumb)))
         }
       } catch (e) {
         reject(e)
@@ -143,7 +140,7 @@ class Whatanime {
   }
 
   /**
-   * An animation preview is received as a video.
+   * An animation preview is received as the url of the video.
    * @param {string} season It is season of animation to receive preview.
    * @param {string} anime The name of the animation to receive the preview.
    * @param {string} filename The file name of the animation to receive the preview.
@@ -165,15 +162,12 @@ class Whatanime {
         } else if (typeof tokenthumb !== 'string') {
           reject(Error('tokenthumb is must string'))
         } else {
-          let response = await request({
-            uri: this.uri.previewVideo
-              .replace(/{season}/, encodeURIComponent(season))
-              .replace(/{anime}/, encodeURIComponent(anime))
-              .replace(/{filename}/, encodeURIComponent(filename))
-              .replace(/{at}/, encodeURIComponent(at))
-              .replace(/{tokenthumb}/, encodeURIComponent(tokenthumb))
-          })
-          resolve(response)
+          resolve(this.uri.previewVideo
+            .replace(/{season}/, encodeURIComponent(season))
+            .replace(/{anime}/, encodeURIComponent(anime))
+            .replace(/{filename}/, encodeURIComponent(filename))
+            .replace(/{at}/, encodeURIComponent(at))
+            .replace(/{tokenthumb}/, encodeURIComponent(tokenthumb)))
         }
       } catch (e) {
         reject(e)
